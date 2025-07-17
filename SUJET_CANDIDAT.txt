@@ -1,0 +1,178 @@
+================================================================================
+                         TEST PRATIQUE FLUTTER - DÉVELOPPEMENT
+================================================================================
+
+INFORMATIONS GÉNÉRALES
+================================================================================
+Durée : 3 heures
+
+
+EXERCICE 1 : GESTION D'API MOCKÉE
+================================================================================
+Fichier : lib/exercises/exercise_1_api.dart
+Points : 7.5 points
+
+DESCRIPTION :
+Implémentez un système de gestion d'utilisateurs avec une API mockée. 
+L'application doit permettre de :
+- Charger et afficher une liste d'utilisateurs
+- Rechercher des utilisateurs en temps réel
+- Filtrer par région
+- Afficher des statistiques
+
+MÉTHODES À IMPLÉMENTER :
+1. _loadUsers() 
+   - Charger les utilisateurs depuis MockUserService
+   - Gérer l'état de chargement
+   - Gérer les erreurs avec try-catch
+
+2. _loadStatistics()
+   - Récupérer les statistiques depuis MockUserService
+   - Mettre à jour l'interface utilisateur
+
+3. _searchUsers(String query)
+   - Recherche en temps réel dans nom, email, région
+   - Maintenir le filtre région actuel
+
+4. _filterByDepartment(String region)
+   - Filtrer par région sélectionnée
+   - Maintenir la recherche actuelle
+   - Gérer le cas "Tous"
+
+
+EXERCICE 2 : LOGIQUE ALGORITHMIQUE
+================================================================================
+Fichier : lib/exercises/exercise_2_algo.dart
+Points : 7.5 points
+
+DESCRIPTION :
+Implémentez un analyseur financier avec calculs complexes. L'application doit 
+analyser des transactions financières et calculer diverses métriques.
+
+MÉTHODES À IMPLÉMENTER :
+1. _calculateAnalytics()
+   - Calculer solde total (revenus - dépenses)
+   - Calculer total des revenus
+   - Calculer total des dépenses
+   - Calculer totaux par catégorie
+
+2. _filterTransactionsByPeriod(String period)
+   - Filtrer par période : "7 jours", "30 jours", "90 jours", "1 an"
+   - Logique de calcul de dates
+   - Retourner liste filtrée
+
+3. _filterTransactionsByCategory(String category)
+   - Filtrer par catégorie
+   - Gérer le cas "Toutes"
+
+4. _getTopExpenseCategories()
+   - Trier les catégories par montant décroissant
+   - Retourner les 5 premières
+   - Gérer le cas où il n'y a pas assez de catégories
+
+5. _calculateAverageExpensePerDay()
+   - Calculer la moyenne des dépenses par jour
+   - Gérer le cas où il n'y a pas de dépenses
+   - Compter les jours uniques avec dépenses
+
+6. _getBudgetHealthStatus()
+   - Calculer ratio dépenses/revenus
+   - Retourner statut : "Excellent", "Bon", "Attention", "Critique"
+   - Gérer le cas où il n'y a pas de revenus
+
+
+EXERCICES BONUS
+================================================================================
+Points bonus : 1 points par exercice
+
+- Exercice 3 : Compteur avec gestion d'état
+- Exercice 4 : ListView avec gestion de défilement
+- Exercice 5 : Données asynchrones
+- Exercice 6 : Gestion d'état avancée
+- Exercice 7 : Navigation entre écrans
+
+
+
+CONSIGNES IMPORTANTES
+================================================================================
+
+PENDANT L'EXERCICE :
+1. Lisez TOUS les commentaires TODO avant de commencer
+2. Implémentez UNIQUEMENT les méthodes demandées
+3. Testez votre code régulièrement
+4. Gérez les cas d'erreur appropriés
+5. Suivez les bonnes pratiques Flutter
+
+RÈGLES STRICTES :
+- NE PAS modifier les modèles de données existants
+- NE PAS supprimer les commentaires TODO
+- NE PAS modifier les signatures des méthodes
+- TESTER chaque fonctionnalité avant de passer à la suivante
+
+COMMANDES UTILES
+================================================================================
+flutter run              # Démarrer l'application
+flutter hot reload       # Rechargement à chaud (r dans le terminal)
+flutter hot restart      # Redémarrage à chaud (R dans le terminal)
+flutter clean            # Nettoyer le projet
+flutter pub get          # Installer les dépendances
+flutter analyze          # Analyser le code
+
+
+
+CRITÈRES D'ÉVALUATION
+================================================================================
+FONCTIONNALITÉ (50%) :
+- Implémentation complète des TODO
+- Fonctionnalités qui marchent correctement
+- Gestion appropriée des états de chargement
+- Interface utilisateur réactive
+
+QUALITÉ DU CODE (30%) :
+- Lisibilité et organisation
+- Respect des bonnes pratiques Flutter
+- Gestion appropriée des erreurs
+- Performance et optimisation
+
+LOGIQUE ALGORITHMIQUE (20%) :
+- Correctness des calculs
+- Gestion des cas edge
+- Efficacité des algorithmes
+- Robustesse du code
+
+
+CONSEILS PRATIQUES
+================================================================================
+1. Commencez par l'exercice qui vous semble le plus simple
+2. Lisez attentivement les commentaires TODO
+3. Testez fréquemment votre code avec hot reload
+4. Gérez les cas d'erreur (connexion réseau, données vides)
+5. Optimisez les performances (évitez les appels API inutiles)
+6. Demandez des clarifications au superviseur si nécessaire
+7. Gérez votre temps
+
+
+
+RESSOURCES INTERDITES
+================================================================================
+- Internet
+- Communication avec d'autres candidats
+
+SUPPORT TECHNIQUE
+================================================================================
+Si vous rencontrez des problèmes techniques :
+1. Vérifiez que Flutter est correctement installé
+2. Assurez-vous que les dépendances sont installées
+3. Redémarrez votre IDE si nécessaire
+4. Contactez le superviseur en cas de problème majeur
+
+LIVRABLES
+================================================================================
+À la fin du test, assurez-vous que :
+- Votre code compile sans erreurs
+- Les fonctionnalités implémentées fonctionnent
+- Le projet peut être exécuté avec flutter run
+
+================================================================================
+                              BONNE CHANCE !
+================================================================================
