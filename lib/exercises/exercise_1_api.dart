@@ -124,14 +124,15 @@ class MockUserService {
   }
 }
 
-class Exercise9ApiReflection extends StatefulWidget {
-  const Exercise9ApiReflection({super.key});
+class Exercise01ApiReflection extends StatefulWidget {
+  const Exercise01ApiReflection({super.key});
 
   @override
-  State<Exercise9ApiReflection> createState() => _Exercise9ApiReflectionState();
+  State<Exercise01ApiReflection> createState() =>
+      _Exercise01ApiReflectionState();
 }
 
-class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
+class _Exercise01ApiReflectionState extends State<Exercise01ApiReflection> {
   List<User> _users = [];
   List<User> _filteredUsers = [];
   Map<String, int> _statistics = {};
@@ -152,7 +153,7 @@ class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
     super.dispose();
   }
 
-  void _loadUsers() async {
+  void _loadUsers() {
     // TODO: Implémentez cette méthode
     // 1. Mettre _isLoading à true
     // 2. Appeler MockUserService.fetchUsers()
@@ -163,7 +164,7 @@ class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
     print('Chargement des utilisateurs...');
   }
 
-  void _loadStatistics() async {
+  void _loadStatistics() {
     // TODO: Implémentez cette méthode
     // 1. Appeler MockUserService.getStatistics()
     // 2. Mettre à jour _statistics
@@ -171,7 +172,7 @@ class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
     print('Chargement des statistiques...');
   }
 
-  void _searchUsers(String query) async {
+  void _searchUsers(String query) {
     // TODO: Implémentez cette méthode
     // 1. Si query est vide, restaurer _users dans _filteredUsers
     // 2. Sinon, appeler MockUserService.searchUsers(query)
@@ -181,7 +182,7 @@ class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
     print('Recherche: $query');
   }
 
-  void _filterByDepartment(String region) async {
+  void _filterByDepartment(String region) {
     // TODO: Implémentez cette méthode
     // 1. Mettre à jour _selectedDepartment
     // 2. Si region == 'Tous', afficher tous les utilisateurs
@@ -196,7 +197,7 @@ class _Exercise9ApiReflectionState extends State<Exercise9ApiReflection> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Exercice 9: Gestion API Mockée'),
+        title: const Text('Exercice 01: Gestion API Mockée'),
         backgroundColor: Colors.deepPurple,
       ),
       body: Padding(

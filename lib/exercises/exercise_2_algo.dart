@@ -27,73 +27,80 @@ class FinancialDataService {
     Transaction(
         id: '1',
         description: 'Salaire',
-        amount: 3500.0,
+        amount: 350000.0,
         date: DateTime.now().subtract(Duration(days: 1)),
         category: 'Salaire',
         type: 'gain'),
     Transaction(
         id: '2',
         description: 'Supermarché',
-        amount: 85.50,
+        amount: 85000.00,
         date: DateTime.now().subtract(Duration(days: 2)),
         category: 'Alimentation',
         type: 'depense'),
     Transaction(
         id: '3',
         description: 'Essence',
-        amount: 65.00,
+        amount: 6500.00,
         date: DateTime.now().subtract(Duration(days: 3)),
         category: 'Transport',
         type: 'depense'),
     Transaction(
         id: '4',
         description: 'Freelance',
-        amount: 750.0,
+        amount: 75000.0,
         date: DateTime.now().subtract(Duration(days: 4)),
         category: 'Freelance',
         type: 'gain'),
     Transaction(
         id: '5',
         description: 'Restaurant',
-        amount: 42.30,
+        amount: 4200.00,
         date: DateTime.now().subtract(Duration(days: 5)),
         category: 'Alimentation',
         type: 'depense'),
     Transaction(
         id: '6',
         description: 'Loyer',
-        amount: 1200.0,
+        amount: 120000.0,
         date: DateTime.now().subtract(Duration(days: 6)),
         category: 'Logement',
         type: 'depense'),
     Transaction(
         id: '7',
         description: 'Électricité',
-        amount: 89.20,
+        amount: 13000.00,
         date: DateTime.now().subtract(Duration(days: 7)),
         category: 'Factures',
         type: 'depense'),
     Transaction(
         id: '8',
         description: 'Vente en ligne',
-        amount: 125.0,
+        amount: 12500.0,
         date: DateTime.now().subtract(Duration(days: 8)),
         category: 'Vente',
         type: 'gain'),
     Transaction(
         id: '9',
         description: 'Cinéma',
-        amount: 28.00,
+        amount: 2800.00,
         date: DateTime.now().subtract(Duration(days: 9)),
         category: 'Loisirs',
         type: 'depense'),
     Transaction(
         id: '10',
         description: 'Bonus',
-        amount: 500.0,
+        amount: 5000.0,
         date: DateTime.now().subtract(Duration(days: 10)),
         category: 'Bonus',
         type: 'gain'),
+    Transaction(
+        id: '11',
+        description: 'Eaux',
+        amount: 5000.00,
+        date: DateTime.now().subtract(Duration(days: 11)),
+        category: 'Factures',
+        type: 'depense'),
   ];
 
   static List<Transaction> getAllTransactions() {
@@ -116,23 +123,22 @@ class FinancialDataService {
   }
 }
 
-class Exercise10AlgorithmicLogic extends StatefulWidget {
-  const Exercise10AlgorithmicLogic({super.key});
+class Exercise02AlgorithmicLogic extends StatefulWidget {
+  const Exercise02AlgorithmicLogic({super.key});
 
   @override
-  State<Exercise10AlgorithmicLogic> createState() =>
-      _Exercise10AlgorithmicLogicState();
+  State<Exercise02AlgorithmicLogic> createState() =>
+      _Exercise02AlgorithmicLogicState();
 }
 
-class _Exercise10AlgorithmicLogicState
-    extends State<Exercise10AlgorithmicLogic> {
+class _Exercise02AlgorithmicLogicState
+    extends State<Exercise02AlgorithmicLogic> {
   List<Transaction> _transactions = [];
   Map<String, double> _categoryTotals = {};
   Map<String, int> _categoryStats = {};
   double _totalSolde = 0.0;
   double _totalRevenue = 0.0;
   double _totalDepense = 0.0;
-  String _selectedPeriod = '30 jours';
   String _selectedCategory = 'Toutes';
 
   @override
@@ -152,19 +158,11 @@ class _Exercise10AlgorithmicLogicState
     // 2. Calculer le total des dépenses (_totalDepense)
     // 3. Calculer le solde total (_totalSolde = revenus - dépenses)
     // 4. Calculer les totaux par catégorie
-    // 5. Calculer les statistiques par catégorie (nombre de transactions)
-    // 6. Utiliser setState pour mettre à jour l'interface
+    // 5. Utiliser setState pour mettre à jour l'interface
 
-    print('Calcul des analyses...');
-  }
-
-  List<Transaction> _filterTransactionsByPeriod(String period) {
-    // TODO: Implémentez cette méthode
-    // 1. Selon la période sélectionnée ('7 jours', '30 jours', '90 jours', '1 an')
-    // 2. Filtrer les transactions selon la date
-    // 3. Retourner la liste filtrée
-
-    return _transactions;
+    print(
+      'Calcul des analyses...',
+    );
   }
 
   List<Transaction> _filterTransactionsByCategory(String category) {
@@ -173,69 +171,7 @@ class _Exercise10AlgorithmicLogicState
     // 2. Sinon, filtrer les transactions par catégorie
     // 3. Retourner la liste filtrée
 
-    return _transactions;
-  }
-
-  Map<String, double> _getTopExpenseCategories() {
-    // TODO: Implémentez cette méthode
-    // 1. Créer un Map avec les catégories de dépenses et leurs totaux
-    // 2. Trier par montant décroissant
-    // 3. Retourner les 5 premières catégories
-    // 4. Logique complexe: gérer les cas où il n'y a pas assez de catégories
-
-    return {'Alimentation': 127.80, 'Transport': 65.00, 'Logement': 1200.00};
-  }
-
-  double _calculateAverageExpensePerDay() {
-    // TODO: Implémentez cette méthode
-    // 1. Filtrer les transactions de type 'depense'
-    // 2. Calculer la somme totale des dépenses
-    // 3. Calculer le nombre de jours uniques avec des dépenses
-    // 4. Retourner la moyenne (total / nombre de jours)
-    // 5. Gérer le cas où il n'y a pas de dépenses
-
-    return 0.0;
-  }
-
-  String _getBudgetHealthStatus() {
-    // TODO: Implémentez cette méthode (logique complexe)
-    // 1. Calculer le ratio dépenses/revenus
-    // 2. Si ratio < 0.5: "Excellent"
-    // 3. Si ratio < 0.7: "Bon"
-    // 4. Si ratio < 0.9: "Attention"
-    // 5. Si ratio >= 0.9: "Critique"
-    // 6. Gérer le cas où il n'y a pas de revenus
-
-    return 'À calculer';
-  }
-
-  Color _getHealthStatusColor(String status) {
-    // TODO: Implémentez cette méthode
-    // Retourner une couleur selon le statut de santé du budget
-    switch (status) {
-      case 'Excellent':
-        return Colors.green;
-      case 'Bon':
-        return Colors.lightGreen;
-      case 'Attention':
-        return Colors.orange;
-      case 'Critique':
-        return Colors.red;
-      default:
-        return Colors.grey;
-    }
-  }
-
-  void _onPeriodChanged(String period) {
-    // TODO: Implémentez cette méthode
-    // 1. Mettre à jour _selectedPeriod
-    // 2. Filtrer les transactions selon la nouvelle période
-    // 3. Recalculer les analyses
-    // 4. Mettre à jour l'interface
-
-    setState(() {
-      _selectedPeriod = period;
-    });
+    return [];
   }
 
   void _onCategoryChanged(String category) {
@@ -244,17 +180,13 @@ class _Exercise10AlgorithmicLogicState
     // 2. Filtrer les transactions selon la nouvelle catégorie
     // 3. Recalculer les analyses
     // 4. Mettre à jour l'interface
-
-    setState(() {
-      _selectedCategory = category;
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Exercice 10: Logique Algorithmique'),
+        title: const Text('Exercice 02: Logique Algorithmique'),
         backgroundColor: Colors.cyan,
       ),
       body: SingleChildScrollView(
@@ -269,13 +201,9 @@ class _Exercise10AlgorithmicLogicState
             ),
             const SizedBox(height: 10),
             const Text(
-              'Exercice de Réflexion - Analyseur Financier:\n'
+              'Exercice  - Analyseur Financier:\n'
               '1. Calculer les totaux (revenus, dépenses, solde)\n'
-              '2. Implémenter le filtrage par période et catégorie\n'
-              '3. Calculer les statistiques avancées\n'
-              '4. Déterminer la santé du budget\n'
-              '5. Gérer les cas complexes et les erreurs\n'
-              '6. Logique algorithmique complexe requise',
+              '2. Implémenter le filtrage par catégorie\n',
               style: TextStyle(fontSize: 14),
             ),
             const SizedBox(height: 20),
@@ -303,29 +231,6 @@ class _Exercise10AlgorithmicLogicState
                             'Dépenses', _totalDepense, Colors.red),
                       ],
                     ),
-                    const SizedBox(height: 16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Santé du Budget:',
-                            style: TextStyle(fontWeight: FontWeight.bold)),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 6),
-                          decoration: BoxDecoration(
-                            color:
-                                _getHealthStatusColor(_getBudgetHealthStatus()),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Text(
-                            _getBudgetHealthStatus(),
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               ),
@@ -335,23 +240,6 @@ class _Exercise10AlgorithmicLogicState
             // Filtres
             Row(
               children: [
-                Expanded(
-                  child: DropdownButtonFormField<String>(
-                    value: _selectedPeriod,
-                    decoration: const InputDecoration(
-                      labelText: 'Période',
-                      border: OutlineInputBorder(),
-                    ),
-                    items: ['7 jours', '30 jours', '90 jours', '1 an']
-                        .map((period) => DropdownMenuItem(
-                              value: period,
-                              child: Text(period),
-                            ))
-                        .toList(),
-                    onChanged: (value) => _onPeriodChanged(value!),
-                  ),
-                ),
-                const SizedBox(width: 16),
                 Expanded(
                   child: DropdownButtonFormField<String>(
                     value: _selectedCategory,
@@ -378,84 +266,6 @@ class _Exercise10AlgorithmicLogicState
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 20),
-
-            // Statistiques avancées
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Statistiques Avancées',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Dépense moyenne/jour:'),
-                        Text(
-                          '${_calculateAverageExpensePerDay().toStringAsFixed(2)} €',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Text('Nombre de transactions:'),
-                        Text(
-                          '${_transactions.length}',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            // Top catégories de dépenses
-            Card(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Top Catégories de Dépenses',
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(height: 16),
-                    ..._getTopExpenseCategories()
-                        .entries
-                        .map(
-                          (entry) => Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 4),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(entry.key),
-                                Text(
-                                  '${entry.value.toStringAsFixed(2)} €',
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                          ),
-                        )
-                        .toList(),
-                  ],
-                ),
-              ),
             ),
             const SizedBox(height: 20),
 
@@ -494,7 +304,7 @@ class _Exercise10AlgorithmicLogicState
                           subtitle: Text(
                               '${transaction.category} • ${transaction.date.day}/${transaction.date.month}'),
                           trailing: Text(
-                            '${transaction.type == 'gain' ? '+' : '-'}${transaction.amount.toStringAsFixed(2)} €',
+                            '${transaction.type == 'gain' ? '+' : '-'}${transaction.amount.toStringAsFixed(2)}',
                             style: TextStyle(
                               color: transaction.type == 'gain'
                                   ? Colors.green
@@ -519,9 +329,9 @@ class _Exercise10AlgorithmicLogicState
     return Column(
       children: [
         Text(
-          '${amount.toStringAsFixed(2)} €',
+          '${amount.toStringAsFixed(2)}',
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 16,
             fontWeight: FontWeight.bold,
             color: color,
           ),
