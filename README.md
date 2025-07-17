@@ -31,20 +31,7 @@ Cette application Flutter contient des exercices pratiques con�us pour tester 
 - `_calculateAnalytics()` : Calculs financiers (solde, revenus, d�penses)
 - `_filterTransactionsByPeriod()` : Filtrage par p�riode avec logique de date
 - `_filterTransactionsByCategory()` : Filtrage par cat�gorie
-- `_getTopExpenseCategories()` : Tri et agr�gation des donn�es
-- `_calculateAverageExpensePerDay()` : Calculs de moyennes complexes
-- `_getBudgetHealthStatus()` : Logique conditionnelle de sant� financi�re
 
-
-## Exercices Bonus
-
-Les exercices bonus se trouvent dans le dossier `lib/exercises/bonus/` et couvrent des concepts Flutter de base :
-
-- **Exercise 3 :** Compteur avec gestion d'�tat
-- **Exercise 4 :** ListView avec gestion de d�filement
-- **Exercise 5 :** Donn�es asynchrones
-- **Exercise 6 :** Gestion d'�tat avanc�e
-- **Exercise 7 :** Navigation entre �crans
 
 ## Instructions pour les Candidats
 
@@ -63,7 +50,7 @@ Les exercices bonus se trouvent dans le dossier `lib/exercises/bonus/` et couvre
 ### R�gles importantes :
 - **Ne pas modifier** les mod�les de donn�es existants
 - **Ne pas supprimer** les commentaires TODO
-- **Impl�menter uniquement** les m�thodes demand�es
+- **Impl�menter** les m�thodes demand�es
 - **Tester** chaque fonctionnalit� avant de passer � la suivante
 - **G�rer** les cas d'erreur et les �tats de chargement
 
@@ -71,10 +58,12 @@ Les exercices bonus se trouvent dans le dossier `lib/exercises/bonus/` et couvre
 1. **Commencez par comprendre** la structure du projet
 2. **Lisez tous les TODO** avant de commencer � coder
 3. **Testez fr�quemment** votre code
-4. **G�rez les cas d'erreur** (connexion r�seau, donn�es vides, etc.)
+4. **G�rez les cas d'erreur** (donn�es vides, etc.)
 5. **Optimisez les performances** (�vitez les appels API inutiles)
 6. **Documentez votre code** si n�cessaire
 7. **Demandez des clarifications** si les instructions ne sont pas claires
+
+
 
 ## Commandes utiles
 
